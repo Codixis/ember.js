@@ -69,8 +69,6 @@ ViewNodeManager.create = function(renderNode, env, attrs, found, parentView, pat
     } else {
       componentInfo.layout = get(component, 'template') || componentInfo.layout;
     }
-
-    renderNode.emberView = component;
   }
 
   Ember.assert("BUG: ViewNodeManager.create can take a scope or a self, but not both", !(contentScope && found.self));
